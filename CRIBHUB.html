@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRIBHUB</title>
+    <link rel="icon" type="png/x-icon" href="C.png">
+
+<style>
+
+      /* style of devices of screen size less than 768px */
+  @media only screen and (min-width: 600px) {
+    /* adding padding to container */
+    .main-container {
+      padding-block: 2rem;
+    }
+    .clock-container{
+        justify-content: center;
+        border-radius: 50px;
+        width: 450px;
+        min-height: auto;
+    }
+  }
+
+    .main {
+        text-align: center;
+        font-family: Courier, monospace;
+        padding-top: 10px;
+    }
+
+    .navigation {
+        overflow: hidden;
+        background-color: #333;
+
+    }
+
+    .navigation a {
+        font-family: Courier, monospace;
+        float: left;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+
+    .navigation a:hover {
+        background-color: skyblue;
+        color: black;
+    }
+
+    .navigation a.active {
+        background-color: skyblue;
+        color: black;
+        font-weight: bold;
+    }
+
+    .navigation a.about{
+        float: right;
+    }
+
+    .page-title{
+    background-color: white;
+    align-items: center;
+    text-align: center;
+    color: #333;
+    font-family: Courier, monospace;
+    }
+
+    .page-title h1{
+    font-family: Courier, monospace;
+    font-weight: bold;
+    }
+
+    .main-container {
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    }
+
+    .column {
+  float: left;
+  width: 25%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: black;
+  color: skyblue;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: skyblue;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: black;
+  background-color: skyblue;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.background{
+  position: relative;
+}
+
+.button:hover {
+  background-color: grey;
+  color: black;
+}
+
+.about-section p{
+    color: #333;
+    float: center;
+}
+
+.column h2{
+  padding-left: 25%;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+
+
+
+
+
+
+</style>
+</head>
+
+<body style="background-color:skyblue;">
+
+    <div class="navigation">
+        <a class="active" href="CRIBHUB.html"><i class="fa fa-fw fa-home"></i></a>
+        <a href="ALARM 2.html"><i class="fa fa-fw fa-bell"></i></a>
+        <a href="CONTACT.html"><i class="fa fa-fw fa-envelope"></i></a>
+        <a class="about" href="ABOUT.html"><i class="fa fa-fw fa-bars"></i> About </a>
+    </div>
+
+    <div class="page-title">
+        <h1 >HOME PAGE</h1>
+    </div>
+
+    <div class="main-container d-flex">
+              <div class="row">
+                <div class="column">
+                  <div class="card">
+                    <img src="cam.png" alt="Live Camera" style="width:100%">
+                    <div class="container">
+                      <h2 style="color: #333; font-family: Courier, monospace; font-weight: bold;">Live Camera</h2>
+                      <p></a>             
+                      <button class="button">
+                      <a href="Http://172.20.10.3" target="_blank">ACCESS</button></a>
+                    </div>
+                  </div>
+                </div>
+              
+              
+                <div class="column">
+                  <div class="card">
+                    <img src="sway.png" alt="Automatic Sway" style="width:100%">
+                    <div class="container">
+                      <h2 style="color: #333; font-family: Courier, monospace; font-weight: bold;">Sway Function</h2>
+                      <p><button class="button">ON / OFF</button></p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="column">
+                  <div class="card">
+                    <img src="toy.png" alt="Musical Toy" style="width:100%">
+                    <div class="container">
+                      <h2 style="color: #333; font-family: Courier, monospace; font-weight: bold;">Musical Toy</h2>
+                      <p><button class="button">ON / OFF</button></p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="column">
+                    <div class="card">
+                      <img src="setting.png" alt="Settings" style="width:100%">
+                      <div class="container">
+                        <h2 style="color: #333; font-family: Courier, monospace; font-weight: bold; padding-left: 33%;">Settings</h2>
+                        <p><button class="button">ACCESS</button></p>
+                      </div>
+
+              
+
+
+
+
+            </div>
+          </div>
+
+
+
+    </div>
+
+    
+        
+
+    </div>
+
+   
+</body>
+</html>

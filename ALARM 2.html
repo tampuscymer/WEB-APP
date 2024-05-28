@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRIBHUB - ALARM</title>
+    <link rel="icon" type="png/x-icon" href="C.png">
+
+<style>
+    .main {
+        text-align: center;
+        font-family: Courier, monospace;
+        padding-top: 10px;
+    }
+
+    .navigation {
+        overflow: hidden;
+        background-color: #333;
+
+    }
+
+    .navigation a {
+        font-family: Courier, monospace;
+        float: left;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+
+    .navigation a:hover {
+        background-color: skyblue;
+        color: black;
+    }
+
+    .navigation a.active {
+        background-color: skyblue;
+        color: black;
+        font-weight: bold;
+    }
+
+    .navigation a.about{
+        float: right;
+    }
+
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Courier, monospace;
+  }
+  
+  .d-flex {
+    display: flex;
+  }
+
+    .btn {
+    outline: none;
+    border: none;
+    background-color: skyblue;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 1px;
+    transition: all 0.3s ease-in-out;
+  }
+  select {
+    appearance: none;
+    outline: black;
+    background-color: skyblue;
+    padding: 0.5rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 2rem;
+    margin-right: 0.3rem;
+    cursor: pointer;
+    color: #0E141B;
+    border-color: black;
+  }
+  
+  .mb {
+    margin-bottom: 1rem;
+  }
+  
+  .main-container {
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: skyblue;
+    position: relative;
+  }
+  
+  .clock-container {
+    padding: 2rem;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    background-color: white;
+  }
+  
+  .current-time {
+    font-size: 2rem;
+    color: black;
+    font-weight: bold;
+  }
+  
+  .alarm-form {
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .submit-button {
+    border-color: black;
+    border: 10px;
+    border-radius: 2rem;
+    font-weight: bold;
+  }
+  
+  .set-alarm-container {
+    width: 100%;
+  }
+  
+  .set-alarm-container .set-alarm-container-title {
+    color: black;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  
+  .alarm {
+    justify-content: space-between;
+    border-radius: 30px;
+    padding: 0.5rem 1rem;
+    align-items: center;
+    font-weight: bold;
+  
+  }
+  .alarm .delete-alarm {
+    border-radius: 2rem;
+    background-color: #333;
+    font-weight: bold;
+    color: white;
+    font-size:xx-medium;
+  }
+  
+  .time {
+    color: #0E141B;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  .btn:focus,
+  .btn:hover {
+    box-shadow: grey 2px 2px 2px 1px inset;
+  }
+  
+  .page-title{
+    background-color: white;
+    align-items: center;
+    text-align: center;
+    color: #333;
+  }
+
+.page-title h1{
+    font-family: Courier, monospace;
+    font-weight: bold;
+}
+
+  
+  /* style of devices of screen size less than 768px */
+  @media only screen and (min-width: 600px) {
+    /* adding padding to container */
+    .main-container {
+      padding-block: 2rem;
+    }
+    .clock-container{
+        justify-content: center;
+        border-radius: 50px;
+        width: 450px;
+        min-height: auto;
+        position: relative;
+    }
+  }
+
+
+
+
+</style>
+</head>
+
+<body style="background-color:skyblue;">
+
+    <div class="navigation">
+        <a href="CRIBHUB.html"><i class="fa fa-fw fa-home"></i></a>
+        <a class="active" href="ALARM 2.html"><i class="fa fa-fw fa-bell"></i></a>
+        <a href="CONTACT.html"><i class="fa fa-fw fa-envelope"></i></a>
+        <a class="about" href="ABOUT.html"><i class="fa fa-fw fa-bars"></i> About </a>
+    </div>
+
+
+    <div class= "page-title">
+        <h1 >ALARM SETUP</h1>
+      </div>
+      <div class="main-container d-flex">
+        <div class="clock-container d-flex">
+          <div class="current-time mb" id= "current-time">_ : _ : _ </div>
+          <form class="alarm-form d-flex mb">
+            <div>
+            <select name="hours" id="hours" required></select>
+  
+            <select required name="minutes" id="minutes"></select>
+  
+            <select required name="seconds" id="seconds"></select>
+            <select required name="am-pm" id="am-pm">
+              <option value="AM">AM</option>
+              <option value="PM">PM</option>
+            </select>
+            </div>
+            <button class="btn submit-button" id="submitButton" type="submit">Set Alarm</button>
+          </form>
+          <div class="set-alarm-container">
+            <div class="set-alarm-container-title mb">ALARMS:</div>
+            <div class="alarms-container" id= "alarms-container"></div>
+          </div>
+        </div>
+      </div>
+  
+      <script src="ALARM 2.js"></script>
+    
+
+   
+</body>
+</html>
